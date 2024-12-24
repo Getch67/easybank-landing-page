@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [github repo](#)
-- Live Site URL: [live website](#)
+- Solution URL: [github repo](https://github.com/Getch67/easybank-landing-page)
+- Live Site URL: [live website](https://getch67.github.io/easybank-landing-page/)
 
 ## My process
 
