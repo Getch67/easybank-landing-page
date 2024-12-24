@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .link-btn {
+    @apply relative flex items-center justify-center  bg-gradient-to-r from-LimeGreen to-BrightCyan text-White font-bold w-40 h-11 xl:w-44 xl:h-12 rounded-custom;
+  }
+  .card-why {
+    @apply flex flex-col items-center xl:items-start xl:w-68 gap-4 w-full h-56;
+  }
+  .card-why-h {
+    @apply text-DarkBlue text-xl font-light;
+  }
+  .card-why-p {
+    @apply text-center xl:text-left text-GrayishBlue text-lsm xl:text-lg2;
+  }
+  .card-latest {
+    @apply rounded bg-White overflow-hidden;
+  }
+  .card-latest-img {
+    @apply w-full h-50 object-cover mb-7 xl:mb-6;
+  }
+  .card-latest-details {
+    @apply px-7 flex flex-col gap-2 pb-10 xl:pb-5;
+  }
+  .card-latest-h {
+    @apply text-mxl font-light xl:font-normal leading-5 text-DarkBlue hover:cursor-pointer hover:text-BrightCyan transition ease-linear duration-300;
+  }
+  .card-latest-p {
+    @apply text-GrayishBlue text-sm2 xl:text-sm3 xl:leading-5;
+  }
+}
+html,
+body {
+  overflow-x: hidden;
+}
+.active-link {
+  color: hsl(233, 26%, 24%);
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(
+      to right,
+      hsl(136, 65%, 51%),
+      hsl(192, 70%, 51%)
+    )
+    1;
+  padding-bottom: 1.2rem;
+}
+.nav-link {
+  transition: all 0.3s ease;
+}
+.nav-link:hover {
+  color: hsl(233, 26%, 24%);
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(
+      to right,
+      hsl(136, 65%, 51%),
+      hsl(192, 70%, 51%)
+    )
+    1;
+  padding-bottom: 1.2rem;
+}
+@media (min-width: 1280px) {
+  .nav-link:hover {
+    padding-bottom: 1.7rem;
+  }
+  .active-link {
+    padding-bottom: 1.7rem;
+  }
+}
+.link-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.link-btn:hover::after {
+  opacity: 1;
+}
+.nav-menu {
+  background: linear-gradient(
+    to bottom,
+    rgba(45, 49, 77, 0.99),
+    rgba(45, 49, 77, 0.01)
+  );
+}
+.hero-bg {
+  background: url("./assets/images/bg-intro-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 70%;
+  position: relative;
+  width: 100%;
+  height: calc(320px + (100vw - 375px) * 1.4);
+  max-height: 900px;
+}
+@media (min-width: 1024px) {
+  .hero-bg {
+    flex: 1;
+    background: url("./assets/images/bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: -10% 72%;
+    height: 100%;
+    width: 100%;
+  }
+}
+.social-link {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.social-link:hover {
+  color: hsl(192, 70%, 51%);
+}
